@@ -16,7 +16,20 @@
 </header>
 <div class="main-wrapper">
 <section>
-
+<!-- コーディング中に気づいた事などをmain-content内にまとめる -->
+  <div class="main-content">
+    <p>今回は比較演算子を用いて、ページを開いた時間、または更新した時間によってアラートの内容を変更する処理を行った。<br>
+      また、atomのターミナルからgitコマンドを入力してmasterブランチにプッシュしている。</p>
+    <h2>個人的に気を付けるポイント</h2>
+    <p>〜条件式における比較演算子と変数および値の位置関係〜</p>
+    <p>main.jsより、変数hourの値が12以上14以下になる例として、<br>
+    (hour >= 12 && hour <= 14)とコーディングしている。<br>
+    (hour >= 12 && 14 >= hour)でも可能だが、前者の方が比較演算子のみに注意を払えば良いので結果的に前者の方が見やすい。</p>
+    <p>上記のコーディングが、<br>
+    (hour >= 12 && <span class="red">hour >= 14</span>)になってしまったり、<br>
+    (hour >= 12 && <span class="red">14 <= hour</span>)になってしまわない様に注意する事。<br>
+    (いずれも変数hourの値が12以上14以上である事を指定しており、条件自体が成立しなくなる。)</p>
+  </div>
 </section>
 </div><!-- /.main-wrapper -->
 <footer>JavaScript Samples</footer>
