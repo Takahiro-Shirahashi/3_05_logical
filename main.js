@@ -2,7 +2,7 @@ var hour = new Date().getHours();
 
 if(hour >=0 && hour < 5){
   window.alert('おやすみなさい');
-if(hour >=19 && hour < 24){
+}else if(hour >=19 && hour < 24){
   window.alert('こんばんは');
 }else if(hour >= 12 && hour <= 14){
   window.alert('こんにちは');
